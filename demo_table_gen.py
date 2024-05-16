@@ -32,6 +32,6 @@ df = spark.sql('''SELECT a.key, rand() as r
                   JOIN skewed_table b 
                   ON a.key = b.key ORDER BY r''')
 
-df.coalesce(4).write.mode('overwrite').saveAsTable('tuning_demo_input_table')
+df.coalesce(4).write.mode('overwrite').saveAsTable('tuning_demo_input_table_xli')
 
 spark.stop()

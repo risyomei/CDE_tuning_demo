@@ -11,4 +11,4 @@ spark.sql('''SELECT *, BUSY_FUNC(r) as r_func
              FROM tuning_demo_input_table 
              ORDER BY key''')\
      .write.mode('overwrite')\
-     .saveAsTable('tuning_demo_output_table')
+     .saveAsTable('tuning_demo_output_table_xli')
